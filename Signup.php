@@ -9,7 +9,19 @@
     $password = "MFM@#12345";
     $db_name = "tickitingsystem-database";
 
-    $conn = mysqli_connect($server_name,  $username,  $password , $db_name) or die ("connection failed");
+try {
+	echo "ddd";
+   $con = mysqli_init();
+mysqli_ssl_set($con,NULL,NULL, NULL, NULL, NULL);
+mysqli_real_connect($con, "mytestsitefadia-server.mysql.database.azure.com", "ifdtuzzxgb", "MFM@#12345", "mytestsitefadia-database", 3306, MYSQLI_CLIENT_SSL);
+    echo "Connected successfully";
+
+    // Perform database operations here
+} catch (PDOException $e) {
+    die("Connection failed: " . $con->getMessage());
+}
+
+    //$conn = mysqli_connect($server_name,  $username,  $password , $db_name) or die ("connection failed");
     $name = $_POST["stdName"];
     $age = $_POST["stdAge"];
     $password = $_POST["Password"];
