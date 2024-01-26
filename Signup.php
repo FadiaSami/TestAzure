@@ -12,8 +12,8 @@
 try {
 	echo "ddd";
    $con = mysqli_init();
-mysqli_ssl_set($con,NULL,NULL, NULL, NULL, NULL);
-mysqli_real_connect($con, "mytestsitefadia-server.mysql.database.azure.com", "ifdtuzzxgb", "MFM@#12345", "mytestsitefadia-database", 3306, MYSQLI_CLIENT_SSL);
+//mysqli_ssl_set($con,NULL,NULL, "", NULL, NULL);
+$conn = mysqli_connect("mytestsitefadia-server.mysql.database.azure.com", "ifdtuzzxgb", "MFM@#12345", "mytestsitefadia-database");
     echo "Connected successfully";
 
     // Perform database operations here
