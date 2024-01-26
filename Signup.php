@@ -4,24 +4,23 @@
 //    echo "Welcome". " ".  $_POST["FirstName"]. " ". $_POST["LasttName"];
 
     var_dump( $_POST );
-    $server_name = "tickitingsystem-server.mysql.database.azure.com";
-    $username = "pelihrdaqx";
-    $password = "MFM@#12345";
-    $db_name = "tickitingsystem-database";
+
+
+$serverName = "tickitingSystem-server.mysql.database.azure.com";
+$databaseName = "tickitingSystem-database";
+$username = "fadia.alaeddin@ltuc.com@tickitingSystem-server";
+$password = "MFM@#123456";
 
 try {
-	echo "ddd";
-   $con = mysqli_init();
-//mysqli_ssl_set($con,NULL,NULL, "", NULL, NULL);
-$conn = mysqli_connect("mytestsitefadia-server.mysql.database.azure.com", "ifdtuzzxgb", "MFM@#12345", "mytestsitefadia-database");
+    $conn = new PDO("mysql:host=$serverName;dbname=$databaseName", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo "Connected successfully";
 
     // Perform database operations here
 } catch (PDOException $e) {
-    die("Connection failed: " . $con->getMessage());
+    die("Connection failed: " . $e->getMessage());
 }
 
-    //$conn = mysqli_connect($server_name,  $username,  $password , $db_name) or die ("connection failed");
     $name = $_POST["stdName"];
     $age = $_POST["stdAge"];
     $password = $_POST["Password"];
