@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h1> Signup Page </h1>
+    <form action="Signup.php" method="post">
+       <label for=""> name </label>
+       <input type="text" name="stdName" id="">
+       <br>
+       <label for="">Age</label>
+       <input type="text" name="stdAge" id="">
+        <br>
+        <label for="Password"> Password</label>
+        <input type="password" name="Password" id="Password">
+        <button type="submit"> Submit</button>
+
+    </form>
+
+    <?php
+    ?>
+</body>
+
+</html>
