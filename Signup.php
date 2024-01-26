@@ -12,10 +12,10 @@
 //    echo "Welcome". " ".  $_POST["FirstName"]. " ". $_POST["LasttName"];
 
     var_dump( $_POST );
-    $server_name = "localhost";
-    $username = "root";
-    $password = "";
-    $db_name = "UniversitySystemNew";
+    $server_name = "tickitingsystem-server.mysql.database.azure.com";
+    $username = "pelihrdaqx";
+    $password = "Masa@#12345";
+    $db_name = "tickitingsystem-database";
 
     $conn = mysqli_connect($server_name,  $username,  $password , $db_name) or die ("connection failed");
     $name = $_POST["stdName"];
